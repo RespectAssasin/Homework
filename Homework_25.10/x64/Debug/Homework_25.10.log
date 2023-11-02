@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\main.cpp(72,43): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\main.cpp(74,30): warning C4267: +=: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\main.cpp(191,5): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\main.cpp(203,9): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\main.cpp(217,49): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Homework_25.10.vcxproj -> C:\Users\S\OneDrive\Рабочий стол\Программирование\Homework\Homework_25.10\x64\Debug\Homework_25.10.exe
