@@ -2,61 +2,94 @@
 #include <string>
 using namespace std;
 
-class Человек {
+class Man {
 public:
-    Человек(string имя, string фамилия, int возраст) :
-        имя(имя), фамилия(фамилия), возраст(возраст) {}
+    Man(string name, string surname, int age) : name(name), surname(surname), age(age) {}
+    Man(){}
 
-    virtual void расскажи_о_себе() {
-        cout << "Меня зовут " << имя << " " << фамилия << ", мне " << возраст << " лет." << endl;
+    virtual void say() {
+        cout << "Меня зовут " << name << " " << surname << ", мне " << age << " лет" << endl;
     }
 
 protected:
-    string имя;
-    string фамилия;
-    int возраст;
+    string name;
+    string surname;
+    int age;
 };
 
-class Преподаватель : public Человек {
+class Teacher : public Man {
 public:
-    Преподаватель(string имя, string фамилия, int возраст, string кафедра) :
-        Человек(имя, фамилия, возраст), кафедра(кафедра) {}
+    Teacher(string name, string surname, int age, string department) : Man(name, surname, age), department(department) {}
 
-    void расскажи_о_себе() override {
-        Человек::расскажи_о_себе();
-        cout << "Я преподаватель, моя кафедра " << кафедра << "." << endl;
+    void say() {
+        Man::say();
+        cout << "Я учитель, моя кафедра: " << department << endl;
+    }
+
+protected:
+    string department;
+};
+
+class Student : public Man {
+public:
+    Student(string name, string surname, int age, int group) : Man(name, surname, age), group(group) {}
+
+    void say() {
+        Man::say();
+        cout << "Я студент, моя группа: " << group << endl;
     }
 
 private:
-    string кафедра;
+    int group;
 };
 
-class Студент : public Человек {
+class Security : public Man {
 public:
-    Студент(string имя, string фамилия, int возраст, int группа) :
-        Человек(имя, фамилия, возраст), группа(группа) {}
+    Security(string name, string surname, int age, string position) : Man(name, surname, age), position(position) {}
 
-    void расскажи_о_себе() override {
-        Человек::расскажи_о_себе();
-        cout << "Я студент, моя группа " << группа << "." << endl;
+    void say() {
+        Man::say();
+        cout << "Я сотрудник охраны, моя должность: " << position << endl;
     }
 
-private:
-    int группа;
+protected:
+    string position;
 };
 
-// аналогичным образом создайте классы для Аспиранта, Охранника и т.д.
+class MegaTeacher : public Teacher {
+public:
+    MegaTeacher(string name, string surname, int age, string department, string second_job) : Teacher(name, surname, age, department), second_job(second_job) {}
+
+    void say() {
+        Teacher::say();
+        cout << "Моя вторая работа: " << second_job << endl;
+    }
+
+protected:
+    string second_job;
+};
 
 int main() {
     setlocale(LC_ALL, "RU");
-    Человек человек("Иван", "Иванов", 25);
-    человек.расскажи_о_себе();
 
-    Преподаватель преподаватель("Петр", "Петров", 45, "Математика");
-    преподаватель.расскажи_о_себе();
+    Man man("Сергей", "Сергеев", 24);
+    man.say();
+    cout << endl;
 
-    Студент студент("Сергей", "Сергеев", 22, 34);
-    студент.расскажи_о_себе();
+    Teacher teacher("Иван", "Иванов", 35, "математики");
+    teacher.say();
+    cout << endl;
+
+    Student student("Петр", "Петров", 22, 3);
+    student.say();
+    cout << endl;
+
+    Security security("Семен", "Семенов", 30, "Младший сержант");
+    security.say();
+    cout << endl;
+
+    MegaTeacher megateacher("Александр", "Александрович", 44, "философия", "президент");
+    megateacher.say();
 
     return 0;
 }
