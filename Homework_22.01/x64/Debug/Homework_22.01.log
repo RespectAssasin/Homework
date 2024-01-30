@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\S\source\repos\Homework_22.01\main.cpp(31,13): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  Homework_22.01.vcxproj -> C:\Users\S\source\repos\Homework_22.01\x64\Debug\Homework_22.01.exe
