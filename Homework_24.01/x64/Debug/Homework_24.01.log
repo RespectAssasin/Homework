@@ -1,4 +1,0 @@
-﻿  main.cpp
-C:\Users\S\source\repos\Homework_24.01\main.cpp(26,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\S\source\repos\Homework_24.01\main.cpp(27,14): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-  Homework_24.01.vcxproj -> C:\Users\S\source\repos\Homework_24.01\x64\Debug\Homework_24.01.exe
